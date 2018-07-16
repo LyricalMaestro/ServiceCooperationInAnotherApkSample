@@ -15,6 +15,7 @@ class SampleClientActivity : AppCompatActivity() {
         const val TAG = "SampleClientActivity"
 
         const val ACTION_RUN_HOST_SERVICE = "com.lyricaloriginal.samplehostapp.RUN"
+        const val PACKAGE_NAME_HOST_APP = "com.lyricaloriginal.samplehostapp"
 
         const val REQUEST_RESIST = 10
         const val RESPONSE_RESIST = 20
@@ -43,6 +44,7 @@ class SampleClientActivity : AppCompatActivity() {
         val intent = Intent().also {
             it.setAction(ACTION_RUN_HOST_SERVICE)
                     .addCategory(Intent.CATEGORY_DEFAULT)
+            it.`package` = PACKAGE_NAME_HOST_APP
         }
 
         startService(intent)
@@ -55,6 +57,7 @@ class SampleClientActivity : AppCompatActivity() {
         val intent = Intent().also {
             it.setAction(ACTION_RUN_HOST_SERVICE)
                     .addCategory(Intent.CATEGORY_DEFAULT)
+            it.`package` = PACKAGE_NAME_HOST_APP
         }
 
         unbindService(serviceConnection)
