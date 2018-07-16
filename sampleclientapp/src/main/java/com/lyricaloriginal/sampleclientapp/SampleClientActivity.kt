@@ -9,10 +9,10 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class SampleClientActivity : AppCompatActivity() {
 
     companion object {
-        const val TAG = "ClientActivity"
+        const val TAG = "SampleClientActivity"
 
         const val ACTION_RUN_HOST_SERVICE = "com.lyricaloriginal.samplehostapp.RUN"
 
