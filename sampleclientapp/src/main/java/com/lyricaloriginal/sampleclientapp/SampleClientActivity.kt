@@ -47,7 +47,11 @@ class SampleClientActivity : AppCompatActivity() {
             it.`package` = PACKAGE_NAME_HOST_APP
         }
 
-        startService(intent)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent)
+        }else{
+            startService(intent)
+        }
         bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE)
     }
 
