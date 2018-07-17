@@ -17,4 +17,4 @@
 2. samplehostappモジュールを実行し、端末にホストアプリをインストール。
 3. sampleclientappモジュールを実行し、端末にクライアントアプリモジュールをインストール。
 
-
+![2018-07-18 0 28 52](https://user-images.githubusercontent.com/4632508/42827546-9ac1de5c-8a21-11e8-88bf-04923e1d3061.png)
