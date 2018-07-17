@@ -9,6 +9,7 @@ import android.app.NotificationManager
 import android.app.NotificationChannel
 import android.annotation.TargetApi
 import android.app.Notification
+import android.os.Build
 
 
 /**
@@ -64,6 +65,10 @@ class SampleService : Service(), SampleModel.Listener {
         super.onDestroy()
         model.stop()
         stopForeground(true)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val nm = getSystemService(NotificationManager::class.java)
+            nm!!.deleteNotificationChannel(NOTIFICATION_CHANNEL_ID)
+        }
     }
 
     override fun onProgressNotified(msg: String) {
